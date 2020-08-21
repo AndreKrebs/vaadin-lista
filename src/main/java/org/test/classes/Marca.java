@@ -4,30 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Marca {
-    private String nome;
 
-    public Marca() {}
+    public static List<String> lista() {
+        List<String> marca = new ArrayList<>();
 
-    public Marca(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public static List<Marca> lista() {
-        List<Marca> marca = new ArrayList<>();
-
-        marca.add(new Marca("GM - Chevrolet"));
-        marca.add(new Marca("Fiat"));
-        marca.add(new Marca("Audi"));
-        marca.add(new Marca("Volkswagen"));
-        marca.add(new Marca("Kia"));
+        marca.add("GM - Chevrolet");
+        marca.add("Fiat");
+        marca.add("Audi");
+        marca.add("Volkswagen");
+        marca.add("Kia");
 
         return marca;
     }

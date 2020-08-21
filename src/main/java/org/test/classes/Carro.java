@@ -1,12 +1,10 @@
 package org.test.classes;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Carro {
 
-    private List<String> opcionais = new ArrayList<>();
+    private Set<String> opcionais = new HashSet<>();
     private String cor;
     private String modelo;
     private String marca;
@@ -14,7 +12,7 @@ public class Carro {
 
     public Carro() {}
 
-    public Carro(List<String> opcionais, String cor, String modelo, String marca, int ano) {
+    public Carro(Set<String> opcionais, String cor, String modelo, String marca, int ano) {
         this.opcionais = opcionais;
         this.cor = cor;
         this.modelo = modelo;
@@ -22,11 +20,11 @@ public class Carro {
         this.ano = ano;
     }
 
-    public List<String> getOpcionais() {
+    public Set<String> getOpcionais() {
         return opcionais;
     }
 
-    public void setOpcionais(List<String> opcionais) {
+    public void setOpcionais(Set<String> opcionais) {
         this.opcionais = opcionais;
     }
 
@@ -66,7 +64,7 @@ public class Carro {
         List<Carro> carros = new ArrayList<>();
 
         carros.add(new Carro(
-                 new ArrayList<String>(Arrays.asList(
+                 new HashSet<String>(Arrays.asList(
                          "Farol de neblina",
                          "Teto solar",
                          "Câmera de ré",
@@ -77,7 +75,7 @@ public class Carro {
                 1980));
 
         carros.add(new Carro(
-                new ArrayList<String>(Arrays.asList(
+                new HashSet<String>(Arrays.asList(
                         "Farol de neblina",
                         "Câmera de ré")),
                 "Branco",
@@ -86,7 +84,7 @@ public class Carro {
                 2014));
 
         carros.add(new Carro(
-                new ArrayList<String>(Arrays.asList(
+                new HashSet<String>(Arrays.asList(
                         "Farol de neblina",
                         "Teto solar",
                         "Câmera de ré",
@@ -97,7 +95,7 @@ public class Carro {
                 2011));
 
         carros.add(new Carro(
-                new ArrayList<String>(Arrays.asList("Farol de neblina")),
+                new HashSet<String>(Arrays.asList("Farol de neblina")),
                 "Azul",
                 "Vayage",
                 "Volkswagen",
@@ -105,4 +103,5 @@ public class Carro {
 
         return carros;
     }
+
 }
